@@ -1,0 +1,42 @@
+* {
+  font-family: arial;
+}
+
+li {
+  list-style-position: inside;
+  cursor: pointer;
+  padding: 10px;
+  list-style: none;
+}
+
+li:hover:not(.quiz__answer--correct):not(.quiz__answer--wrong) {
+  cursor: pointer;
+  background-color: #3333338c;
+}
+
+.score {
+  display: none;
+}
+
+/* Javascript styles */
+.quiz__answer--correct,
+.quiz__answer--wrong {
+  color: #fff;
+  transition: background-color 0.1s;
+}
+
+.quiz__answer--correct {
+  background-color: rgb(29, 219, 29);
+}
+
+.quiz__answer--wrong {
+  background-color: rgb(211, 64, 27);
+}
+
+.change-cursor {
+  cursor: no-drop;
+}
+
+.disable-cursor>* {
+  pointer-events: none;
+}
